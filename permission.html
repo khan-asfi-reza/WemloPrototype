@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bs/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkbox.css">
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<main class="dashboard">
+    <div class="">
+        <button id="expandButton2" class="hidden-expand-button btn">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <aside id="left-panel" class="left-panel d-flex flex-column">
+        <div class="d-flex justify-content-center head">
+            <div class="circle center-0">
+                <h2 class="head-title text-white text-center">Ellietrac</h2>
+            </div>
+        </div>
+        <div class="divider-border mt-3">  </div>
+        <nav class="flex-1 d-flex">
+            <div class="container flex-1 d-flex flex-column">
+                <ul class="d-flex flex-column flex-1 list-style-none p-0">
+                    <li class="nav-item mt-3">
+                        <a href="index.html">
+                            <span class="nav-text text-white">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-3">
+                        <a href="index.html">
+                            <span class="nav-text text-white">Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-3">
+                        <a href="index.html">
+                            <span class="nav-text text-white">Menu</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </aside>
+    <div id="right-panel" class="right-panel">
+        <div class="panel-container">
+            <div class="container">
+                <div class="container ">
+                    <div class="bcumb mb-5">
+                        <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                            <div class="tick-mark checked">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="mt-1">
+                                Build Team
+                            </div>
+                        </div>
+                        <div class="bcumb-border"></div>
+                        <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                            <div class="tick-mark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="mt-1">
+                                Grant Permission
+                            </div>
+                        </div>
+
+                    </div>
+                    <h3 class="mb-5">Grant Permission</h3>
+
+                    <form autocomplete="off">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Own View</th>
+                                <th>Team View</th>
+                                <th>Create User</th>
+                                <th>Make Loan</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <tr>
+                                    <td>User 1</td>
+                                    <td class="">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td class="">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td class="">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td class="">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>User 2</td>
+                                    <td class="">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td class="">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td class="">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td class="">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="mt-5 d-flex flex-row-reverse">
+                            <a href="success.html" class="btn btn-theme w-25">Next <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+<script>
+
+
+
+    var expandButton2 = document.getElementById("expandButton2");
+    var leftPanel = document.getElementById("left-panel");
+    var rightPanel = document.getElementById("right-panel");
+
+    function panelToggle() {
+        leftPanel.classList.toggle("nav-off");
+        rightPanel.classList.toggle("nav-off");
+    }
+
+    expandButton2.onclick = panelToggle;
+
+    function deleteItem(id){
+        document.getElementById(id).remove()
+    }
+
+    document.getElementById("add").onclick = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var email = document.getElementById("email");
+        var name = document.getElementById("name");
+        var role = document.getElementById("role");
+        var tbody = document.getElementById("tbody");
+
+        var tr = document.createElement("tr");
+        tr.setAttribute("id", (tbody.childNodes.length + 1).toString());
+        tr.innerHTML = '<td>'+ email.value +'</td> <td>'+ name.value +'</td><td>'+ role.value +'</td><td><button class="btn btn-outline-danger" onclick="deleteItem(' + (tbody.childNodes.length + 1).toString() +')"><i class="fa fa-trash"></i>Delete</button></td>';
+
+        tbody.appendChild(tr);
+
+        email.value = "";
+        name.value = "";
+        role.value = "";
+    }
+
+</script>
+</html>

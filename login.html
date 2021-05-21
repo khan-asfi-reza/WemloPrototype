@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bs/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Ellietrac Signup</title>
+
+    <style>
+        .strength{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: gray;
+            display: none;
+        }
+        #meter{
+            height: 4px;
+            position: absolute;
+
+        }
+    </style>
+
+</head>
+<body class="signup__body">
+<header class="container d-flex justify-content-between navigation align-items-center">
+    <div>
+        <a class="head_title font-header" href="index.html">Ellietrac</a>
+    </div>
+    <div class="nav__menu">
+        <ul class="d-flex p-0 justify-content-between">
+            <li><a href="" class="btn">Login</a></li>
+        </ul>
+    </div>
+</header>
+<main class="d-grid center-0 h-90vh">
+    <section class="signup__form signup__form__large container">
+        <h2>Welcome To <span class="theme__blue">Ellietrac</span></h2>
+        <form autocomplete="off">
+            <div class="animated__input my-4">
+                <input required type="email" id="id_email" placeholder=" " value="">
+                <label id="email_label" for="id_email">Email</label>
+                <div>
+                    <i class="fas fa-id-card"></i>
+                </div>
+            </div>
+            <div class="animated__input my-4">
+                <input required type="password" id="id_password">
+                <label for="id_email">Password</label>
+            </div>
+            <div class="mt-5">
+                <button type="button" id="submitBtn" class="btn">Login</button>
+            </div>
+        </form>
+    </section>
+</main>
+</body>
+<script>
+    window.onload = function () {
+        document.getElementById("id_email").focus()
+    }
+
+    document.getElementById("submitBtn").onclick = function (e) {
+        e.preventDefault();
+        window.location = "admin_view.html"
+    }
+</script>
+</html>

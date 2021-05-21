@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bs/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Ellietrac Signup</title>
+
+    <style>
+        .strength {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: gray;
+            display: none;
+        }
+
+        #meter {
+            height: 4px;
+            position: absolute;
+
+        }
+    </style>
+
+</head>
+<body class="signup__body">
+<header class="container d-flex justify-content-between navigation align-items-center">
+    <div>
+        <a class="head_title font-header" href="index.html">Ellietrac</a>
+    </div>
+    <div class="nav__menu">
+        <ul class="d-flex p-0 justify-content-between">
+            <li><a href="" class="nav__menu__active btn">Signup</a></li>
+            <li><a href="" class="btn">Login</a></li>
+        </ul>
+    </div>
+</header>
+<main class="d-grid center-0 h-90vh">
+    <section class="signup__form signup__form__xxl container package-container">
+        <div class="bcumb mb-5 justify-content-between">
+            <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                <div class="tick-mark checked">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="mt-1">
+                    Signup
+                </div>
+            </div>
+            <div class="bcumb-border"></div>
+            <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                <div class="tick-mark">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="mt-1">
+                    Choose Package
+                </div>
+            </div>
+            <div class="bcumb-border"></div>
+            <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                <div class="tick-mark">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="mt-1">
+                    Create Team
+                </div>
+            </div>
+            <div class="bcumb-border"></div>
+            <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                <div class="tick-mark">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="mt-1">
+                    Add Permissions
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center">Select Your Package</h2>
+        <div class="package-div">
+            <div id="p1" class="package-item active">
+                <p class="text-center package-name">Package 1</p>
+                <h3 class="theme__blue text-center package-price">10$</h3>
+                <p class="price-helper text-center">USD / month</p>
+                <div class="perks">
+                    <div class="text-center">
+                        <button onclick="onClick(1)" class="btn package-btn my-3">
+                            Select
+                        </button>
+                    </div>
+                    <p><i class="fa fa-check"></i>You will get advantage 1</p>
+                    <p><i class="fa fa-check"></i>You will get advantage 2</p>
+                    <p><i class="fa fa-check"></i>You will get advantage 3</p>
+                    <p><i class="fa fa-check"></i>You will get advantage 4</p>
+                </div>
+            </div>
+            <div id="p2" class="package-item">
+                <p class="text-center package-name">Package 2</p>
+                <h3 class="theme__blue text-center package-price">30$</h3>
+                <p class="price-helper text-center">USD / month</p>
+
+                <div class="perks">
+                    <div class="text-center">
+                        <button onclick="onClick(2)" class="btn package-btn my-3">
+                            Select
+                        </button>
+                    </div>
+                    <p><i class="fa fa-check"></i>You will get advantage 1</p>
+                    <p><i class="fa fa-check"></i>You will get advantage 2</p>
+                    <p><i class="fa fa-check"></i>You will get advantage 3</p>
+                    <p><i class="fa fa-check"></i>You will get advantage 4</p>
+                </div>
+            </div>
+            <div id="p3" class="package-item">
+                <p class="text-center package-name">Package 3</p>
+                <h3 class="theme__blue text-center package-price">60$</h3>
+                <p class="price-helper text-center">USD / month</p>
+
+                <div class="perks">
+                    <div class="text-center">
+                        <button onclick="onClick(3)" class="btn package-btn my-3">
+                            Select
+                        </button>
+                    </div>
+                    <p><i class="fa fa-check"></i>You will get advantage 1</p>
+                    <p><i class="fa fa-check"></i>You will get advantage 2</p>
+                    <p><i class="fa fa-check"></i>You will get advantage 3</p>
+                    <p><i class="fa fa-check"></i>You will get advantage 4</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 d-flex flex-row-reverse">
+            <a href="create.html" class="btn btn-theme w-25">Next <i class="fa fa-arrow-right"></i></a>
+        </div>
+    </section>
+</main>
+</body>
+<script>
+ var active = 1;
+
+ function onClick(id) {
+    active = id;
+    document.querySelectorAll(".package-item").forEach(each => each.classList.remove("active"));
+    document.getElementById("p"+id).classList.add("active");
+ }
+
+
+
+</script>
+</html>

@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bs/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Ellietrac Signup</title>
+
+    <style>
+        .strength{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: gray;
+            display: none;
+        }
+        #meter{
+            height: 4px;
+            position: absolute;
+
+        }
+    </style>
+
+</head>
+<body class="signup__body">
+<header class="container d-flex justify-content-between navigation align-items-center">
+    <div>
+        <a class="head_title font-header" href="index.html">Ellietrac</a>
+    </div>
+    <div class="nav__menu">
+        <ul class="d-flex p-0 justify-content-between">
+            <li><a href="" class="nav__menu__active btn">Signup</a></li>
+            <li><a href="" class="btn">Login</a></li>
+        </ul>
+    </div>
+</header>
+<main class="d-grid center-0 h-90vh">
+    <section class="signup__form signup__form__large container">
+        <div class="bcumb mb-5 justify-content-between">
+            <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                <div class="tick-mark checked">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="mt-1">
+                    Signup
+                </div>
+            </div>
+            <div class="bcumb-border"></div>
+            <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                <div class="tick-mark checked">
+                    <i class="fas fa-check "></i>
+                </div>
+                <div class="mt-1">
+                    Choose Package
+                </div>
+            </div>
+            <div class="bcumb-border"></div>
+            <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                <div class="tick-mark">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="mt-1">
+                    Create Company
+                </div>
+            </div>
+            <div class="bcumb-border"></div>
+            <div class="bcumb-item d-flex flex-column justify-content-center align-items-center">
+                <div class="tick-mark">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="mt-1">
+                    Build Team
+                </div>
+            </div>
+        </div>
+        <h2>Create your Company</h2>
+        <form autocomplete="off">
+            <form autocomplete="off">
+                <div class="animated__input my-4">
+                    <input required type="text" id="id_company_name" placeholder=" ">
+                    <label id="email_label" for="id_company_name">Company Name</label>
+                    <div>
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                </div>
+
+                <div class="mt-5 d-flex flex-row-reverse">
+                    <a href="build.html" class="btn btn-theme w-25">Next <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </form>
+        </form>
+    </section>
+</main>
+</body>
+
+
+<script>
+
+    window.onload = function () {
+        document.getElementById("id_company_name").focus()
+    };
+
+</script>
+
